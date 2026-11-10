@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mentorship application form for aspiring mentees to apply for the mentorship programme.">
+  <meta name="author" content="Okonkwo Obed Chikamso">
+  <title>Mentorship Application Form</title>
+</head>
+<body>
+  <main>
+
+    <h1>Mentorship Application</h1>
+    <p>Complete the form below to apply for the mentorship programme.</p>
+
+    <form action="mentorship-applications" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <div class="field">
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" name="full_name" minlength="2" maxlength="100" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" maxlength="254" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" minlength="7" maxlength="20" autocomplete="tel" required>
+        </div>
+
+        <div class="field">
+          <label for="date-of-birth">Date of birth</label>
+          <input type="date" id="date-of-birth" name="date_of_birth" min="1900-01-01" max="2026-11-09" required>
+        </div>
+
+        <div class="field choice">
+          <label for="gender">Gender</label> <br>
+          <input type="radio" id="gender-woman" name="gender" value="woman" required>
+          <label for="gender-woman">Woman</label>
+          <input type="radio" id="gender-man" name="gender" value="man">
+          <label for="gender-man">Man</label>
+          <input type="radio" id="gender-nonbinary" name="gender" value="nonbinary">
+          <label for="gender-nonbinary">Non-binary</label>
+          <input type="radio" id="gender-prefer-not-to-say" name="gender" value="prefer_not_to_say">
+          <label for="gender-prefer-not-to-say">Prefer not to say</label>
+        </div>
+        </fieldset>
+
+      <fieldset>
+        <legend>Development Information</legend>
+
+        <div class="field">
+          <label for="experience-level">Current experience level</label>
+          <select id="experience-level" name="experience_level" required>
+            <option value="">Choose your level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+
+        <div class="field choice">
+          <span>Areas of interest</span><br>
+          <input type="checkbox" id="interest-web" name="areas_of_interest" value="web_development">
+          <label for="interest-web">Web development</label>
+          <input type="checkbox" id="interest-mobile" name="areas_of_interest" value="mobile_development">
+          <label for="interest-mobile">Mobile development</label>
+          <input type="checkbox" id="interest-data" name="areas_of_interest" value="data_science">
+          <label for="interest-data">Data science</label>
+          <input type="checkbox" id="interest-ui" name="areas_of_interest" value="ui_ux">
+          <label for="interest-ui">UI/UX design</label>
+        </div>
+
+        <div class="field">
+          <label for="learning-track">Preferred learning track</label>
+          <select id="learning-track" name="learning_track" required>
+            <option value="">Choose a learning track</option>
+            <option value="frontend">Frontend development</option>
+            <option value="backend">Backend development</option>
+            <option value="fullstack">Full-stack development</option>
+            <option value="product-design">Product design</option>
+            <option value="data">Data and analytics</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="github">GitHub profile URL</label>
+          <input type="url" id="github" name="github_url" maxlength="50" placeholder="https://github.com/your-username">
+        </div>
+
+        <div class="field">
+          <label for="reason">Why do you want to join?</label>
+          <textarea id="reason" name="reason_for_joining" minlength="20" maxlength="1000" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Other</legend>
+
+        <div class="field">
+          <label for="availability">Availability</label>
+          <select id="availability" name="availability" required>
+            <option value="">Choose your availability</option>
+            <option value="weekday-mornings">friday  7am</option>
+            <option value="weekday-evenings">friday 6pm</option>
+            <option value="weekends">saturday</option>
+            <option value="flexible">Flexible</option>
+          </select>
+        </div>
+
+        <div class="field agreement">
+          <input type="checkbox" id="rules-agreement" name="rules_agreement" value="agreed" required>
+          <label for="rules-agreement">I have read and agree to follow the mentorship rules.</label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Submit application</button>
+    </form>
+
+    <h2>Table Explaining Each Form Control</h2>
+
+    <table>
+        <tr>
+            <th>Form Control</th>
+            <th>Input Type / HTML Element</th>
+            <th>Why It Was Selected</th>
+        </tr>
+
+        <tr>
+            <td>Full Name</td>
+            <td>text</td>
+            <td>Allows applicants to enter their full name.</td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td>email</td>
+            <td>Collects an email address and checks its format.</td>
+        </tr>
+
+        <tr>
+            <td>Phone</td>
+            <td>tel</td>
+            <td>Allows applicants to enter their phone number.</td>
+        </tr>
+
+        <tr>
+            <td>Date of Birth</td>
+            <td>date</td>
+            <td>Allows applicants to select their date of birth.</td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td>radio</td>
+            <td>Allows applicants to select one gender option.</td>
+        </tr>
+
+        <tr>
+            <td>Experience Level</td>
+            <td>select</td>
+            <td>Allows applicants to choose their current skill level.</td>
+        </tr>
+
+        <tr>
+            <td>Areas of Interest</td>
+            <td>checkbox</td>
+            <td>Allows applicants to select multiple areas of interest.</td>
+        </tr>
+
+        <tr>
+            <td>Preferred Learning Track</td>
+            <td>select</td>
+            <td>Allows applicants to choose their preferred learning path.</td>
+        </tr>
+
+        <tr>
+            <td>GitHub Profile URL</td>
+            <td>url</td>
+            <td>Collects the applicant's GitHub profile link.</td>
+        </tr>
+
+        <tr>
+            <td>Why They Want to Join</td>
+            <td>textarea</td>
+            <td>Provides space for applicants to explain their reasons.</td>
+        </tr>
+
+        <tr>
+            <td>Availability</td>
+            <td>select</td>
+            <td>Allows applicants to choose their available learning times.</td>
+        </tr>
+
+        <tr>
+            <td>Agreement to Mentorship Rules</td>
+            <td>checkbox</td>
+            <td>Allows applicants to confirm that they agree to the mentorship rules.</td>
+        </tr>
+
+        <tr>
+            <td>Submit Application</td>
+            <td>button type="submit"</td>
+            <td>Submits the completed application form.</td>
+        </tr>
+    </table>
+  </main>
+</body>
+</html>
